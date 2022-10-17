@@ -35,3 +35,100 @@ code {
 .card-content {
   flex-grow: 1;
 }
+
+.cart {
+position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  cursor: pointer;
+  z-index: 5;
+  padding: 0.5rem;
+  color: #4db6ac;
+
+}
+
+@media (min-width: 767px) {
+  .cart {
+    top: 5rem;
+    bottom: unset;
+  }
+}
+.cart-quantity {
+
+}
+
+.basket {
+  position: fixed;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: aliceblue;
+  width: 50rem;
+  max-width: 95%;
+  box-shadow: inset -1px 3px 8px 5px #1f87ff, 2px 5px 16px 0px;
+  animation: show 500ms ease-in-out;
+}
+
+.basket-big {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: aliceblue;
+  width: 50rem;
+  max-width: 95%;
+  box-shadow: inset -1px 3px 8px 5px #1f87ff, 2px 5px 16px 0px;
+  animation: show 500ms ease-in-out;
+}
+
+.basket-close {
+  cursor: pointer;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  color: whitesmoke;
+}
+
+.basket-delete {
+    cursor: pointer;
+}
+
+.quantityControl-buttons {
+  cursor: pointer;
+  vertical-align: middle;
+  color: #4db6ac;
+}
+
+.button-checkout {
+  cursor: pointer;
+  vertical-align: middle;
+  position: relative;
+  margin-right: 1rem;
+}
+#toast-container {
+  top: 3rem !important;
+  animation: fade-in 250ms ease-in-out;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  } to {
+  opacity: 1;
+      transform: translateY(0rem);
+      }
+}
+
+@keyframes show {
+  from {
+    top: 99%;
+    opacity: 0;
+  }
+  to {
+    top: 80%;
+    opacity: 1;
+  }
+
+}
+
