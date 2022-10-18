@@ -7,7 +7,7 @@ This project was created to learn React. At this page you able choose and buy go
 
 ### Stack
 + JavaScript
-+ React hooks (useState, useEffect)
++ React hooks (useContext, useEffect)
 + API
 + Materialise UI framework
 
