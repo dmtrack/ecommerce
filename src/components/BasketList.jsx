@@ -1,15 +1,11 @@
 import { BasketItem } from "./BasketItem";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useContext } from "react";
+import { ShopContext } from "../context";
 
-function BasketList(props) {
-  const {
-    order = [],
-    handleBasketShow = Function.prototype,
-    removeFromBasket = Function.prototype,
-    incrementItem = Function.prototype,
-    decrementItem = Function.prototype,
-  } = props;
+function BasketList() {
+  const { order = [], handleBasketShow } = useContext(ShopContext);
   const totalPrice = order.reduce((sum, el) => {
     return sum + el.price * el.quantity;
   }, 0);
@@ -25,15 +21,7 @@ function BasketList(props) {
         </i>
       </li>
       {order.length ? (
-        order.map((item) => (
-          <BasketItem
-            key={item.id}
-            removeFromBasket={removeFromBasket}
-            incrementItem={incrementItem}
-            decrementItem={decrementItem}
-            {...item}
-          />
-        ))
+        order.map((item) => <BasketItem key={item.id} {...item} />)
       ) : (
         <li className="collection-item">Basket is empty</li>
       )}

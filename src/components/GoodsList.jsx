@@ -1,14 +1,14 @@
 import { GoodsCard } from "./GoodsCard";
+import { useContext } from "react";
+import { ShopContext } from "../context";
 
-const GoodsList = (props) => {
-  const { goods = [], addToBasket = Function.prototype } = props;
+const GoodsList = () => {
+  const { goods = [] } = useContext(ShopContext);
   return (
     <>
       <div className="goods">
         {goods.length ? (
-          goods.map((card) => (
-            <GoodsCard {...card} key={card.id} addToBasket={addToBasket} />
-          ))
+          goods.map((card) => <GoodsCard {...card} key={card.id} />)
         ) : (
           <h3 className="flow-text">Nothing here</h3>
         )}

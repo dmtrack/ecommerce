@@ -1,13 +1,11 @@
+import { useContext } from "react";
+import { ShopContext } from "../../src/context";
+
 function BasketItem(props) {
-  const {
-    id,
-    name,
-    price,
-    quantity,
-    removeFromBasket = Function.prototype,
-    incrementItem = Function.prototype,
-    decrementItem = Function.prototype,
-  } = props;
+  const { id, name, price, quantity } = props;
+
+  const { removeFromBasket, incrementItem, decrementItem } =
+    useContext(ShopContext);
 
   return (
     <>
