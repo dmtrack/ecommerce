@@ -2,11 +2,13 @@ import { useContext } from "react";
 import { ShopContext } from "../context";
 
 function Cart() {
-  const { quantity = 0, handleBasketShow } = useContext(ShopContext);
+  const { handleBasketShow, order } = useContext(ShopContext);
   return (
     <div className="cart " onClick={handleBasketShow}>
       <i className="material-icons ">shopping_cart</i>
-      {quantity ? <span className="cart-quantity">{quantity}</span> : null}
+      {order.length ? (
+        <span className="cart-quantity">{order.length}</span>
+      ) : null}
     </div>
   );
 }
