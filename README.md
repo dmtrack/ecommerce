@@ -1,5 +1,5 @@
 
-## ***E-commerce page***
+## E-commerce page
 [https://dmtrack.github.io/ecommerce](https://dmtrack.github.io/ecommerce)
 
 ### Description
