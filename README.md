@@ -1,6 +1,6 @@
 
 ## ***E-commerce page***
-[https://dmtrack.github.io/ecommerce]
+[https://dmtrack.github.io/ecommerce](https://dmtrack.github.io/ecommerce)
 
 ### Description
 This project was created to learn React. At this page you able choose and buy goods. At cart there is an information about your order.
